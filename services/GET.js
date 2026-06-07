@@ -1,21 +1,32 @@
+//IMPORTAR O URL BASE DO JSON SERVER
 import { URL } from "../data/api.js";
 
-export async function GET() {
+
+
+export async function GET(endpoint) {
     try {
-        const response = await fetch(URL);
         
-        // Corrigido: usando a variável 'response' em vez de 'resposta'
+        const response = await fetch(`${URL}/${endpoint}`);
+        
         if (!response.ok) {
-            throw new Error(`Erro ao carregar: ${response.status}`);
+            throw new Error(`Erro ao buscar ${endpoint}: ${response.statusText}`);
         }
 
-        const dados = await response.json();
+        const data = await response.json();
+        
+        // Salvamento automático para garantir que a informação persista
+        localStorage.setItem(endpoint, JSON.stringify(data));
 
-        console.log("Dados carregados", dados);
-        return dados; // Geralmente funções GET retornam os dados para quem a chamou
+        console.log(`Dados obtidos de ${endpoint}:`, data);
+        return data;
 
-    } catch (erro) { // Corrigido: declarado o parâmetro 'erro'
-        console.error("Falha na requisição:", erro);
+    } catch (erro) {
+        console.error(`Erro na requisição GET para ${endpoint}:`, erro);
+        return null;
     }
 }
-GET();
+
+
+document.getElementById("GET").addEventListener(`click`, function(){
+    GET("usuarios");
+});

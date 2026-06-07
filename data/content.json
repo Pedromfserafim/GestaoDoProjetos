@@ -1,20 +1,81 @@
 {
   "usuarios": [
-    { "id": 1, "nome": "Ana Silva", "cargo": "Desenvolvedora" },
-    { "id": 2, "nome": "Carlos Souza", "cargo": "Designer" },
-    { "id": 3, "nome": "Beatriz Lima", "cargo": "Gerente de Projetos" },
-    { "id": 4, "nome": "Diego Alves", "cargo": "QA" }
+    {
+      "id": "1",
+      "nome": "Ana Silva",
+      "cargo": "Desenvolvedora"
+    },
+    {
+      "id": "2",
+      "nome": "Carlos Souza",
+      "cargo": "Designer"
+    },
+    {
+      "id": "3",
+      "nome": "Beatriz Lima",
+      "cargo": "Gerente de Projetos"
+    },
+    {
+      "id": "4",
+      "nome": "Diego Alves",
+      "cargo": "QA"
+    },
+    {
+      "id": "5",
+      "nome": "Ana Silva",
+      "cargo": "Desenvolvedora"
+    }
   ],
   "projetos": [
-    { "id": 101, "titulo": "Site Institucional", "status": "Em andamento" },
-    { "id": 102, "titulo": "App Mobile", "status": "Planejamento" },
-    { "id": 103, "titulo": "Dashboard Financeiro", "status": "Concluído" },
-    { "id": 104, "titulo": "Migração de Servidor", "status": "Pausado" }
+    {
+      "id": "101",
+      "titulo": "Site Institucional",
+      "status": "Em andamento"
+    },
+    {
+      "id": "102",
+      "titulo": "App Mobile",
+      "status": "Planejamento"
+    },
+    {
+      "id": "103",
+      "titulo": "Dashboard Financeiro",
+      "status": "Concluído"
+    },
+    {
+      "id": "104",
+      "titulo": "Migração de Servidor",
+      "status": "Pausado"
+    }
   ],
   "tarefas": [
-    { "id": 1, "projetoId": 101, "responsavelId": 1, "titulo": "Configurar ambiente", "concluida": true },
-    { "id": 2, "projetoId": 101, "responsavelId": 2, "titulo": "Criar layout home", "concluida": false },
-    { "id": 3, "projetoId": 102, "responsavelId": 3, "titulo": "Definir requisitos", "concluida": false },
-    { "id": 4, "projetoId": 103, "responsavelId": 4, "titulo": "Testar API de pagamentos", "concluida": true }
+    {
+      "id": "1",
+      "projetoId": 101,
+      "responsavelId": 1,
+      "titulo": "Configurar ambiente",
+      "concluida": true
+    },
+    {
+      "id": "2",
+      "projetoId": 101,
+      "responsavelId": 2,
+      "titulo": "Criar layout home",
+      "concluida": false
+    },
+    {
+      "id": "3",
+      "projetoId": 102,
+      "responsavelId": 3,
+      "titulo": "Definir requisitos",
+      "concluida": false
+    },
+    {
+      "id": "4",
+      "projetoId": 103,
+      "responsavelId": 4,
+      "titulo": "Testar API de pagamentos",
+      "concluida": true
+    }
   ]
 }
