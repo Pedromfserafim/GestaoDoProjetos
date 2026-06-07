@@ -2,12 +2,17 @@
 import { URL } from "../data/api.js";
 
 
-// FUNÇÃO PARA REALIZAR O GET
-export async function GET(endpoint) {
+
+
+// FUNÇÃO PARA REALIZAR O DELETE
+export async function DELETE(id, endpoint) {
     try {
         
-        const response = await fetch(`${URL}/${endpoint}`);
-        
+        const response = await fetch(`${URL}/${endpoint}/${id}`, {
+            method: 'DELETE',
+            headers: { 'Content-Type': 'application/json' } 
+        });
+
         if (!response.ok) {
             throw new Error(`Erro ao buscar ${endpoint}: ${response.statusText}`);
         }
@@ -21,20 +26,51 @@ export async function GET(endpoint) {
         return data;
 
     } catch (erro) {
-        console.error(`Erro na requisição GET para ${endpoint}:`, erro);
+        console.error(`Erro na requisição DELETE para ${endpoint}:`, erro);
         return null;
     }
 }
 
 
 
-
-// DEFINIÇÃO DAS VARIAVEIS DE INPUT
+//DEFINIÇÃO DAS VARIAVEIS DE INPUT
+const id = "ympqCIky5BQ";
 const endpoint = "usuarios";
 
 
-
-// EXECUÇÃO DO GET ACIONAMENTO ATRAVES DE BOTAO
-document.getElementById("GET").addEventListener(`click`, function(){
-    GET(endpoint);
+// EXECUÇÃO DO DELETE ACIONAMENTO ATRAVES DE BOTAO
+document.getElementById("DELETE").addEventListener(`click`, function(){
+    DELETE(id, endpoint);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
