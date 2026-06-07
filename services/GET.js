@@ -2,7 +2,7 @@
 import { URL } from "../data/api.js";
 
 
-
+// FUNÇÃO PARA REALIZAR O GET
 export async function GET(endpoint) {
     try {
         
@@ -27,6 +27,14 @@ export async function GET(endpoint) {
 }
 
 
+
+
+// DEFINIÇÃO DAS VARIAVEIS DE INPUT
+const endpoint = "usuarios";
+
+
+
+// EXECUÇÃO DO GET ACIONAMENTO ATRAVES DE BOTAO
 document.getElementById("GET").addEventListener(`click`, function(){
-    GET("usuarios");
+    GET(endpoint);
 });
