@@ -1,4 +1,7 @@
-// npx json-server --watch js/data/content.json --port 3000
+// PARA INSTALAR O JSON SERVER
+// npm install -g json-server
 
-export const URL = "./data/content.json";
+// npx json-server --watch data/content.json --port 3000
+
+export const URL = "http://localhost:3000";
  
