@@ -4,7 +4,7 @@ import { URL } from "../data/api.js";
 
 
 
-
+// FUNÇÃO PARA REALIZAR O POST
 export async function POST(novoObjeto, endpoint) {
     try {
         
@@ -32,43 +32,16 @@ export async function POST(novoObjeto, endpoint) {
     }
 }
 
-// Exemplo de uso:
-const novoObjeto = { id: "10", "nome": "Ana Silva", "cargo": "Desenvolvedora" };
 
 
 
+// DEFINIÇÃO DAS VARIAVEIS DE INPUT
+const novoObjeto = { "nome": "Ana Silva", "cargo": "Desenvolvedora" };
+const endpoint = "usuarios";
+
+
+
+// EXECUÇÃO DO POST ACIONAMENTO ATRAVES DE BOTAO
 document.getElementById("POST").addEventListener(`click`, function(){
-    POST(novoObjeto, "usuarios");
+    POST(novoObjeto, endpoint);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
