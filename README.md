@@ -3,7 +3,7 @@ Este é um exercicio para a Master D. O Objetivo é desenvover um MPV de um waea
 
 # Rodar o sistema
 
-# 1. Instalar o node
+## 1. Instalar o node
         1.1. Abra o terminal.
         1.2. Verificar se já está instalado:                    node -v
         1.3. Se não estiver instalado:
@@ -15,16 +15,16 @@ Este é um exercicio para a Master D. O Objetivo é desenvover um MPV de um waea
 
 
         
-# 2. Instalar o JSON server
+## 2. Instalar o JSON server
         2.1. Abrir o terminal.
         2.2. Executar:              npm install -g json-server
         2.3. Iniciar o servidor:    json-server --watch data/content.json
 
 
 
-# 4. Instalar o "live server preview" dentro do SVCode
-        4.1. Barra lado esquerdo clicar:    Extensions
-        4.2. Na barra de pesquisa:          Live Server from "Ritwick Dey"
-        4.3. Instalar
-        4.4. ir na pasta do projeto, no index.html clicar direito do mouse e clicar "Open with Live Server"
+## 3. Instalar o "live server preview" dentro do SVCode
+        3.1. Barra lado esquerdo clicar:    Extensions
+        3.2. Na barra de pesquisa:          Live Server from "Ritwick Dey"
+        3.3. Instalar
+        3.4. ir na pasta do projeto, no index.html clicar direito do mouse e clicar "Open with Live Server"
 
