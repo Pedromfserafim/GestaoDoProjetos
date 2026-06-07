@@ -1,3 +1,8 @@
+import { GET } from "./services/GET.js";
+
+
+
+
 
 const btn = document.getElementById("botao_03");
 var estado = "AZUL";
