@@ -21,7 +21,7 @@
       "cargo": "QA"
     },
     {
-      "id": "5",
+      "id": "7Hnt2CWPZg8",
       "nome": "Ana Silva",
       "cargo": "Desenvolvedora"
     }
@@ -77,5 +77,6 @@
       "titulo": "Testar API de pagamentos",
       "concluida": true
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
