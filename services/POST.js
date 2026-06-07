@@ -1,29 +1,74 @@
+//IMPORTAR O URL BASE DO JSON SERVER
 import { URL } from "../data/api.js";
+
+
+
+
 
 export async function POST(novoObjeto, endpoint) {
     try {
+        
         const response = await fetch(`${URL}/${endpoint}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(novoObjeto)
         });
-        
+
         if (!response.ok) {
-            // Ajustado para 'enviar' para ficar coerente com o método POST
-            throw new Error(`Erro ao enviar dados: ${response.status}`);
+            throw new Error(`Erro ao buscar ${endpoint}: ${response.statusText}`);
         }
 
-        const dados = await response.json();
+        const data = await response.json();
+        
+        // Salvamento automático para garantir que a informação persista
+        localStorage.setItem(endpoint, JSON.stringify(data));
 
-        console.log("Dados gravados com sucesso:", dados);
-        return dados; // Importante para confirmar o que foi salvo
+        console.log(`Dados obtidos de ${endpoint}:`, data);
+        return data;
 
     } catch (erro) {
-        console.error("Falha na requisição POST:", erro);
-        throw erro; // Repassa o erro para quem chamou a função poder tratar
+        console.error(`Erro na requisição POST para ${endpoint}:`, erro);
+        return null;
     }
 }
 
 // Exemplo de uso:
-const novoObjeto = { "nome": "Ana Silva", "cargo": "Desenvolvedora" };
+const novoObjeto = { id: "10", "nome": "Ana Silva", "cargo": "Desenvolvedora" };
+
+
+
+document.getElementById("POST").addEventListener(`click`, function(){
+    POST(novoObjeto, "usuarios");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
